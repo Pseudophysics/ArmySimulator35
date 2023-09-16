@@ -1,0 +1,19 @@
+Stats,Gish,Spell Jammer,Dragon Rider,Zerths,Mind Healers,Scout Squad,Drider,Blackguards,Stone Lords,Siege Engine,Engineers
+total_hp,40,150,150,40,45,20,70,45,60,125,30
+dice,3d6,5d6,4d10,2d6,2d6,1d1,2d10,2d6,3d6,1d10,1d1
+avg,10.5,17.5,22,7,7,1,11,7,10.5,5.5,1
+defense,1,3,4,2,2,0,2,1,2,3,0
+spdef,2,0,5,3,5,1,2,1,0,0,0
+speed,2,5,6,3,3,3,3,2,2,2,1
+max stack,20,1,4,20,15,10,10,15,15,3,30
+static_ability_1,,Can't enter building,Can't enter building,,,Ignores Defense,,,,,
+static_ability_2,,,,,,,all terrain vehicle,,,,
+movement,,Flying,Flying,,,,,,,,
+heal,,,,,1d6,,1d10,2d10,,,
+charge1,(2) teleport (2),,,(2) teleport (2),(2) teleport (2),,,,,(20) deploy,(8) add 1 reinforcements to tile
+charge2,,,,,,,,,,(100) mortar,(4) lay explosives
+pilotable,,(1) (2),,,,,,,,(1) (1),
+roll1,(9) remove mc,,,(8) remove mc,(12) remove stun/mind control,(6) Apply Paralytic poison,web to prevent movement of one squad in tile,,,,
+roll2,,,,,,(8) Hide,,,,,
+creaturetype,,building,,,,,,,,building,
+multiplier,,,,,,,(2) undead,(3) undead,,(2) building,

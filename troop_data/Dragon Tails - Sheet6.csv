@@ -1,0 +1,12 @@
+Stats,Gish,Space Galleon (yanki),Dragon Rider,Zerths,Spell Jammers (zerai),Mind Healers,Scout Squad,Drider,Blackguards,Stone Lords,Siege Engine,Siege Engine (deployed),Engineers
+total_hp,40,150,150,40,150,45,20,70,45,60,125,125,30
+dice,3d6,5d6,4d10,2d6,5d6,2d6,1,2d10,2d6,3d6,1d10,6d10,1
+avg,10.5,17.5,22,7,17.5,7,1,11,7,10.5,5.5,33,1
+defense,1,3,4,2,4,2,0,2,1,2,3,5,0
+spdef,2,0,5,3,0,5,1,2,1,0,0,0,0
+speed,2,5,6,3,5,3,3,3,2,2,2,0,1
+Max Stack,20,1,4,20,1,15,10,10,15,15,3,3,30
+Ability 1,2 2 speed teleports,flying,flying,2 2 speed teleports,flying,remove stun/mind control,(half squad for space galleon),2x damage vs undead,3x damage vs undead,,(2x building damage),2x building damage,set explosives on square
+Ability 2,roll 9+ on 2d6 to remove mind control,piloted (1 crew 2 groups),,roll 8+ on 2d6 to remove mind control,piloted (1 crew 2 groups),2 2 speed teleports,paralytic 1 round (6),all terain vehicle,2d10 healing,,piloted,piloted,add 1 reinforcements to tile
+Ability 3,,,,,,1d6 healing,hide (8),1d10 healing,,,,,
+Ability 4,,,,,,,ignores reinforcements,web to prevent movement of one squad in tile,,,,,
