@@ -1,9 +1,10 @@
+__all__ = ['g']
+
 from pydantic import BaseModel
 from typing import Tuple, Optional
 import re
-import math
 import pandas as pd
-
+from pathlib import Path
 
 class TroopChar(BaseModel):
     troop_name: str
@@ -24,14 +25,10 @@ class TroopChar(BaseModel):
     creaturetype: Optional[str] = None
     multiplier: Optional[str] = None
 
-
-
-
 def calc_damage_dealt(
     defense: int,
     damage: int
 ):
-
     dif = damage - defense
     if dif > 0:
         return dif
@@ -49,49 +46,18 @@ def disect_dice(dice: str) -> (int, int):
 
 
 def mkunitdict():
+    file = Path(__file__).parent
 
-    t = pd.read_csv('base_stats.csv')
+    t = pd.read_csv(file / "troop_data" / 'base_stats.csv')
 
     t.set_index('Stats', inplace=True)
 
     troops = {}
     for i in t:
 
-        troops[i] = TroopChar(troop_name=i, **t[i].dropna())
+        troops[i.lower()] = TroopChar(troop_name=i, **t[i].dropna())
     return troops
 
 
 g = mkunitdict()
-
-
-def unit_output():
-    required_output = {'troop_name',
-                       }
-
-class butter():
-print(g)
-
-class Gish():
-
-
-
-def read_commands(frame:pd.DataFrame()):
-    '''
-
-    :param frame:
-    :return:
-    '''
-    keys = [
-        'unit name',
-        'unit type',
-        'current hp',
-        'status',
-        'location',
-        'order',
-        'target',
-        'value rolled'
-    ]
-
-
-
 
