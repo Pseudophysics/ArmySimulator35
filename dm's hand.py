@@ -33,21 +33,34 @@ async def on_message(message):
     if message.author == client.user:
         return
     inpval = message.content.lower()
-
-    cont, command, chow = re.split(' ', inpval, maxsplit=2)
-    if cont != 'f':
+    try:
+        flag, executions = re.split(' ', inpval, maxsplit=1)
+    except: # noqa
         return
-
-    if command in commands:
+    if flag != 'f':
+        return
+    execs = re.split('\n', executions)
+    for i in execs:
         try:
-            output = commands[command](chow)
-            await message.channel.send(str(output))
-        except Exception as e: # noqa
-            await message.channel.send(f'Issues executing reading command ```{command}``` '
-                                       f'with input ```{chow}```'
-                                       f'\nexception: {e}')
-    else:
-        await message.channel.send(f'Could not recognize command {command}')
+            command, chow = re.split(' ', i, maxsplit=1)
+        except: # noqa
+            await message.channel.send(f'unable to parse command {i}')
+            pass
+        else:
+
+            if command in commands:
+                try:
+                    output = commands[command](chow)
+                    await message.channel.send(str(output))
+                except Exception as e: # noqa
+                    await message.channel.send(
+                        f'Issues executing reading command '
+                        f'```{command}``` '
+                        f'with input ```{chow}```'
+                        f'\nexception: {e}'
+                    )
+            else:
+                await message.channel.send(f'Could not recognize command {command}')
 
 client.run(TOKEN)
 print('bruh')
